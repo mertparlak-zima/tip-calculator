@@ -20,7 +20,10 @@ function App() {
         friendTip={friendTip}
         setFriendTip={setFriendTip}
       />
-      <Summarize />
+      {bill && tip && friendTip && (
+        <Summarize tip={tip} friendTip={friendTip} bill={Number(bill)} />
+      )}
+
       <Reset />
     </div>
   );
