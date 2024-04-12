@@ -24,7 +24,12 @@ function App() {
         <Summarize tip={tip} friendTip={friendTip} bill={Number(bill)} />
       )}
 
-      <Reset />
+      <Reset
+        setBill={setBill}
+        setFriendTip={setFriendTip}
+        setTip={setTip}
+        myOptions={myOptions}
+      />
     </div>
   );
 }
