@@ -1,13 +1,15 @@
-import BillInput from "../Billinput/BillInput";
-import FriendTips from "../FriendTips/FriendTips";
+import BillInput from "../Billinput";
+import FriendTips from "../FriendTips";
 import Reset from "../Reset/Reset";
-import Summarize from "../Summarize/Summarize";
-import YourTips from "../YourTips/YourTips";
+import Summarize from "../Summarize";
+import YourTips from "../YourTips";
+import { useState } from "react";
 
 function App() {
+  const [bill, setBill] = useState(0);
   return (
     <div>
-      <BillInput />
+      <BillInput bill={bill} setBill={setBill} />
       <YourTips />
       <FriendTips />
       <Summarize />
